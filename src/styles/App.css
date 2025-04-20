@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #F5F5F5;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+/* Personal Detail/Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 25em;
+  padding: 1em;
+  border-radius: 20px;  
+  gap: 1em;
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.content label {
+  display: flex;
+  flex-direction: column;
+  gap:0.5em;
+  font-weight: bold;
+}
+
+.content input {
+  border-radius: 15px;
+  background-color: #F5F5F5;
+  border-color: transparent;
+  height: 1.6em;
+  padding: 0.5em 1em;
+}
+
+.card .heading {
+  font-weight: bolder;
+  font-size: 1.7em;
+}
