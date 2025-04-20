@@ -11,6 +11,19 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+:root {
+  --light-grey-color: #F5F5F5;
+}
+
+
+
+/* Left side  */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 3em 3em;
+}
 
 
 
@@ -41,13 +54,133 @@ body {
 
 .content input {
   border-radius: 15px;
-  background-color: #F5F5F5;
+  background-color: var(--light-grey-color);
   border-color: transparent;
   height: 1.6em;
   padding: 0.5em 1em;
 }
 
-.card .heading {
+.card .heading, .education-header h2  {
   font-weight: bolder;
-  font-size: 1.7em;
+  font-size: 1.5rem;
+}
+
+
+/* Education Card */
+
+.buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.buttons button, .delete-btn {
+  padding: 0.5em;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+} 
+
+.buttons button:hover, .delete-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+
+}
+
+.save-btn {
+  background-color: rgb(68, 122, 238);
+  color: white;
+  font-weight: bold;
+  border-color: transparent;
+}
+
+.cancel-btn, .delete-btn {
+  background-color: white;
+  border: 1px solid grey;
+}
+
+.education-sub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.education-details {
+  display: flex;
+  justify-content:space-between;
+  font-weight:800;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  align-items: center;
+  padding: 0.4em 0;
+  border-radius: 10px;
+}
+
+.education-details:hover {
+  transform: translateY(-2px);;
+  transform: scale(1.03);
+  background-color: var(--light-grey-color);
+  padding: 0.6em;
+  
+}
+
+
+.education-add-btn {
+  align-self: center;
+  width: 10em;
+  padding: 0.5em 0em;
+  border-radius: 10px;
+  border-color: transparent;
+  font-weight: bolder;
+  transition: all 0.3s ease;
+}
+
+.education-add-btn:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  transform: scale(1.05);
+  margin-bottom: 0.5em;
+}
+
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education-header button {
+  background-color: white;
+  border: transparent;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.chevron-icon {
+  width: 1.5em;
+  transition: all 0.3s ease;
+}
+
+.chevron-btn.open .chevron-icon {
+  transform: rotate(180deg); 
+}
+
+.date {
+  display: flex;
+  gap: 1em;
+}
+
+/* experience */
+textarea{
+  border-color: transparent;
+  background-color: var(--light-grey-color);
+  border-radius: 10px;
+  padding: 0.5em;
+  resize: vertical;
+  min-height: 1em;
 }

@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import ChevronDown from '../assets/down-chevron-svgrepo-com.svg'; 
 
 
-export default function EducationDetail () {
+export default function ExperienceDetail () {
     const [education, setEducation] = useState([]);
     const [expDropStatus, setExpDropStatus] = useState(false);
     const [formData, setFormData] = useState({
-        school: "",
-        degree: "",
+        companyName: "",
+        positionTitle: "",
         startDate: "",
-        endDate: ""
+        endDate: "",
+        desc: "",
     });
     const [showEducationSection, setShowEducationSection] = useState(true);
 
@@ -22,7 +23,7 @@ export default function EducationDetail () {
         };
         setEducation(prev => [...prev, newEdu]); 
         setExpDropStatus(!expDropStatus); 
-        setFormData({ school: "", degree: "", startDate: "", endDate: "" }); 
+        setFormData({ school: "", degree: "", startDate: "", endDate: "" , desc: ""}); 
     }
 
     const handleDelete = (id) => {
@@ -44,7 +45,7 @@ export default function EducationDetail () {
     return (
         <div className="card">
             <div className="education-header">
-                <h2>Education</h2>
+                <h2>Experience</h2>
                 <button className={`chevron-btn ${showEducationSection ? 'open' : ''}`}  
                 onClick={() => setShowEducationSection(prev => !prev)}> <img src={ChevronDown}  alt="Toggle Chevron" className="chevron-icon"/> 
                 </button>
@@ -54,19 +55,19 @@ export default function EducationDetail () {
             {
                 expDropStatus ? (
                     <form className="content" onSubmit={handleSubmit}>
-                        <label>School
+                        <label>Company Name
                             <input 
                                 type="text"     
-                                name="school" 
-                                value={formData.school}  
+                                name="companyName" 
+                                value={formData.companyName}  
                                 onChange={handleChange}  
                             />
                         </label>
-                        <label>Degree
+                        <label>Position Title
                             <input 
                                 type="text" 
                                 name="degree" 
-                                value={formData.degree}
+                                value={formData.positionTitle}
                                 onChange={handleChange}
                             />
                         </label>
@@ -88,6 +89,16 @@ export default function EducationDetail () {
                                 />
                             </label>
                         </div>
+                        <label> Description 
+                            <textarea
+                                name="desc"
+                                value={formData.desc}
+                                rows="4"
+                                cols='40'
+                                placeholder="Enter a description"
+                                onChange={handleChange}
+                            />
+                        </label>
                         <div className="buttons">
                             <button 
                                 type="button" 
@@ -109,7 +120,7 @@ export default function EducationDetail () {
                         <div className="education-list">
                             {education.map((edu) => (
                                 <div className="education-details" key={edu.id}>
-                                    <p>{edu.school}</p>
+                                    <p>{edu.companyName}</p>
                                     <button 
                                         className="delete-btn" 
                                         onClick={() => handleDelete(edu.id)}
@@ -123,7 +134,7 @@ export default function EducationDetail () {
                             className="education-add-btn" 
                             onClick={handleToggleForm}
                         >
-                            + Education
+                            + Experience
                         </button>
                     </div>
                   )

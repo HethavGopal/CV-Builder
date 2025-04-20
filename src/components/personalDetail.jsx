@@ -26,7 +26,6 @@ export default function PersonalDetail () {
         console.log(formData);
     }
 
-
     return ( 
         <div className="card">
             <h2 className="heading">Personal Details</h2>

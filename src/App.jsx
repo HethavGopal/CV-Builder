@@ -2,14 +2,21 @@
 import './styles/App.css'
 import PersonalDetail from './components/personalDetail'
 import EducationDetail from './components/educationDetail'
+import ExperienceDetail from './components/experienceDetails'
 
 function App() {
  
 
   return (
-    <div className="app">
-      <PersonalDetail />
-      <EducationDetail />
+    <div className="main">
+       <div className="left">
+        <PersonalDetail />
+        <EducationDetail />
+        <ExperienceDetail />
+      </div>
+      <div className="right">
+         
+      </div>
     </div>
   )
 }
