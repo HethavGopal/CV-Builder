@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import ChevronDown from '../assets/down-chevron-svgrepo-com.svg'; 
 
 
-export default function EducationDetail () {
-    const [education, setEducation] = useState([]);
+export default function EducationDetail ({education, setEducation}) {
     const [expDropStatus, setExpDropStatus] = useState(false);
     const [formData, setFormData] = useState({
         school: "",
         degree: "",
         startDate: "",
-        endDate: ""
+        endDate: "",
+        location: "",
     });
+
     const [showEducationSection, setShowEducationSection] = useState(true);
 
 
@@ -22,7 +23,7 @@ export default function EducationDetail () {
         };
         setEducation(prev => [...prev, newEdu]); 
         setExpDropStatus(!expDropStatus); 
-        setFormData({ school: "", degree: "", startDate: "", endDate: "" }); 
+        setFormData({ school: "", degree: "", startDate: "", endDate: "", location: ""}); 
     }
 
     const handleDelete = (id) => {
@@ -67,6 +68,14 @@ export default function EducationDetail () {
                                 type="text" 
                                 name="degree" 
                                 value={formData.degree}
+                                onChange={handleChange}
+                            />
+                        </label>
+                        <label>Location
+                            <input 
+                                type="text" 
+                                name="location" 
+                                value={formData.location}
                                 onChange={handleChange}
                             />
                         </label>

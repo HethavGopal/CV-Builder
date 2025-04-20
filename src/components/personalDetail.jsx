@@ -1,15 +1,8 @@
 import React from "react";
-import { useState } from "react";
 
 
 
-export default function PersonalDetail () {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phoneNumber: "",
-        Address: "",
-    })
+export default function PersonalDetail ({formData,setFormData}) {
 
     const handleChange = (event) => {
         const key = event.target.name;

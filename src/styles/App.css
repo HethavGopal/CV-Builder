@@ -16,6 +16,13 @@ body {
 }
 
 
+.main {
+  display: flex;
+  justify-content: center;
+  
+}
+
+
 
 /* Left side  */
 .left {
@@ -184,3 +191,123 @@ textarea{
   resize: vertical;
   min-height: 1em;
 }
+
+
+/* Resume Display / Right Part*/
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.resume {
+  width: 50em;
+  background-color: white;
+  height: 70em;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Personal-Details Part */
+
+.personal-detail-card {
+  display: flex;
+  flex-direction: column;
+  background-color:antiquewhite;
+  padding: 2em;
+  gap: 1em;
+}
+
+.personal-detail-card h2 {
+  align-self: center;
+  font-weight: bolder;
+  font-size: 2em;
+
+}
+
+.sub-personal-info-card {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+
+.sub-personal-info-card p {
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  gap: 0.5em;
+}
+
+
+.icon {
+  width: 2em;
+}
+
+/* Education Part */
+
+
+.education-info-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+}
+
+.education-info-card h2 {
+  background-color: var(--light-grey-color);
+  width: 30em;
+  text-align: center;
+  padding: 0.3em 0;
+  font-size: 1.4em;
+}
+
+.education-sub-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-top: 1em;
+  width: 100%; 
+}
+
+.educationResume-sub-card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1.5em;
+  padding: 0em 4.3em;
+
+}
+
+.date-location{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.uni-name {
+  font-weight: bold;
+}
+
+
+
+/* Exp */
+
+
+.uni-degree {
+  font-style: italic;
+}
+
+.exp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.date-location-exp {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 0.2em;
+}
+
